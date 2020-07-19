@@ -24,7 +24,7 @@ public class HelloController {
   @GetMapping("superSecret")
   public String secretRoute(@RequestParam String password) {
     if (!password.equals("toki")) {
-      System.out.println("You do not belong here!");
+      return "You do not belong here!";
     }
       return "The force is strong within you!";
   }
@@ -35,7 +35,7 @@ public class HelloController {
   }
 
   @GetMapping("math/add")
-  public double addTwoNumbers(double x, double y) {
+  public double addTwoNumbers(@RequestParam double x, @RequestParam double y) {
     return mathService.addTwoValues(x,y);
   }
 

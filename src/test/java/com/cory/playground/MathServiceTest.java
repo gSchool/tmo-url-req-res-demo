@@ -9,7 +9,6 @@ public class MathServiceTest {
 
   @Test
   public void return_pi_from_math_service() throws Exception {
-
     assertEquals(mathService.valueOfPi(), 3.14159265359);
   }
 
