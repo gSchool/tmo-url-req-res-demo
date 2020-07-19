@@ -10,18 +10,18 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(HelloController.class)
-public class HelloControllerTest {
+@WebMvcTest(MathController.class)
+public class MathControllerTest {
 
   @Autowired
   private MockMvc mvc;
 
   @Test
   public void testSuperSecretRoute() throws Exception {
-    this.mvc.perform(get("/superSecret?password=toki")
+    this.mvc.perform(get("/math/pi")
         .accept(MediaType.TEXT_PLAIN))
         .andExpect(status().isOk())
-        .andExpect(content().string("The force is strong within you!"));
+        .andExpect(content().string("3.14"));
   }
 
 }
