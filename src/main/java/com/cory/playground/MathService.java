@@ -9,7 +9,15 @@ public class MathService {
     return 3.14159265359;
   }
 
-  public double addTwoValues(double x, double y) {
+  public double addTwoNumbers(double x, double y) {
     return x + y;
+  }
+
+  public double subtractTwoNumbers(double x, double y) {
+    return x - y;
+  }
+
+  public double volumeOfTheRectangle(double x, double y, double z) {
+    return x * y * z;
   }
 }
