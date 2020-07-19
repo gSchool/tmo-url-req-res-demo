@@ -16,6 +16,9 @@ public class HelloControllerTest {
   @Autowired
   private MockMvc mvc;
 
+  @Autowired
+  private MathService mathService;
+
   @Test
   public void testSuperSecretRoute() throws Exception {
     this.mvc.perform(get("/superSecret?password=toki")
