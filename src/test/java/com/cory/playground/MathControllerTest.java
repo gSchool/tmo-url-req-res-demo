@@ -21,7 +21,7 @@ public class MathControllerTest {
     this.mvc.perform(get("/math/pi")
         .accept(MediaType.TEXT_PLAIN))
         .andExpect(status().isOk())
-        .andExpect(content().string("3.14"));
+        .andExpect(content().string("3.14159265359"));
   }
 
 }
