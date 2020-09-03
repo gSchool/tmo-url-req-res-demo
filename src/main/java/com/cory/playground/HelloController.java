@@ -14,7 +14,7 @@ public class HelloController {
     return "Hello Moto";
   }
 
-  @GetMapping("superSecret")
+  @GetMapping("/superSecret")
   public String secretRoute(@RequestParam String password) {
     if (!password.equals("toki")) {
       return "You do not belong here!";
