@@ -21,7 +21,7 @@ public class MathService {
   }
 
   public double volumeOfTheRectangle(double x, double y, double z) {
-    return x * y + z;
+    return x * y * z;
   }
 
   public double areaOfTheCircle(double r) {
